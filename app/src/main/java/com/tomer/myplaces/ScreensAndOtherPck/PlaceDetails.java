@@ -117,7 +117,7 @@ public class PlaceDetails extends AppCompatActivity {
                 double km2 = Double.parseDouble(km);
 
                 placeDBHelperFavorites = new PlaceDBHelperFavorites(PlaceDetails.this);
-                placeDBHelperFavorites.addMapFav(name, address, rating2, km2, photo);
+                placeDBHelperFavorites.addPlaceFav(name, address, rating2, km2, photo);
 
                 Intent intNew = new Intent(PlaceDetails.this, MainActivity.class);
                 startActivity(intNew);

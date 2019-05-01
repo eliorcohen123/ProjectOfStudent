@@ -89,7 +89,7 @@ public class FragmentSearch extends Fragment {
 // for ActivityCompat#requestPermissions for more details.
         if (provider != null) {
             location = locationManager.getLastKnownLocation(provider);
-            // Search maps from that URL and put them in the SQLiteHelper
+            // Search places from that URL and put them in the SQLiteHelper
             if (location != null) {
                 if (mAdapter != null) {
                     SharedPreferences settings1 = getActivity().getSharedPreferences("mysettings1",
@@ -172,7 +172,7 @@ public class FragmentSearch extends Fragment {
         return mView;
     }
 
-    // Set maps in FragmentSearch
+    // Set places in FragmentSearch
     public static void setPlaces(ArrayList<PlaceModel> list) {
         mPlaceList = list;
         mAdapter.clear();

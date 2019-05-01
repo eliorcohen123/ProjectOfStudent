@@ -22,14 +22,14 @@ public class GetPlacesAsyncTaskFavorites extends AsyncTask<PlaceDBHelperFavorite
 
     // DoInBackground of the ArrayList of PlaceModel that put the getAllPlaces in the SQLiteHelper in the ArrayList of PlaceModel
     @Override
-    protected ArrayList<PlaceModel> doInBackground(PlaceDBHelperFavorites... mapDBHelperFavorites) {
-        PlaceDBHelperFavorites myDb = mapDBHelperFavorites[0];
+    protected ArrayList<PlaceModel> doInBackground(PlaceDBHelperFavorites... placeDBHelperFavorites) {
+        PlaceDBHelperFavorites myDb = placeDBHelperFavorites[0];
         mPlaceList = myDb.getAllPlaces();
 
         return mPlaceList;
     }
 
-    // execute to add maps manually
+    // execute to add places to favorites
     @Override
     protected void onPostExecute(ArrayList<PlaceModel> placeModels) {
         super.onPostExecute(placeModels);

@@ -34,13 +34,13 @@ public class PlaceCustomAdapterFavorites extends ArrayAdapter<PlaceModel> {
             listItem = LayoutInflater.from(mContext).inflate(R.layout.place_item_row_favorites, parent, false);
         }
 
-        PlaceModel currentMap = getItem(position);  // Position of items
-        if (currentMap != null) {  // If the position of the items not null
+        PlaceModel currentPlace = getItem(position);  // Position of items
+        if (currentPlace != null) {  // If the position of the items not null
             try {
                 // Put the image in image3
                 ImageView image1 = listItem.findViewById(R.id.image3);
                 Picasso.get().load("https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="
-                        + currentMap.getPhoto_reference() +
+                        + currentPlace.getPhoto_reference() +
                         "&key=" + mContext.getString(R.string.api_key_search)).into(image1);
             } catch (Exception e) {
 
@@ -48,11 +48,11 @@ public class PlaceCustomAdapterFavorites extends ArrayAdapter<PlaceModel> {
 
             // Put the text in name3
             TextView name1 = listItem.findViewById(R.id.name3);
-            name1.setText(String.valueOf(currentMap.getName()));
+            name1.setText(String.valueOf(currentPlace.getName()));
 
             // Put the text in address3
             TextView address1 = listItem.findViewById(R.id.address3);
-            address1.setText(String.valueOf(currentMap.getVicinity()));
+            address1.setText(String.valueOf(currentPlace.getVicinity()));
         }
         return listItem;
     }

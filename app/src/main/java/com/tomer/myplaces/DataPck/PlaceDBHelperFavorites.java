@@ -53,7 +53,7 @@ public class PlaceDBHelperFavorites extends SQLiteOpenHelper {
     }
 
     //Add info items
-    public void addMapFav(String name, String address, Double rating, Double km, String photo) {
+    public void addPlaceFav(String name, String address, Double rating, Double km, String photo) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 

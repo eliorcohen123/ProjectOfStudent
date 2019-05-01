@@ -2,7 +2,7 @@
     <string name="app_name">MyPlaces</string>
     <string name="api_key_search">API_KEY</string>
     <string name="key_units">myKm</string>
-    <string name="map_search_key">map_search_key</string>
-    <string name="map_favorites_key">map_favorites_key</string>
+    <string name="place_search_key">place_search_key</string>
+    <string name="place_favorites_key">place_favorites_key</string>
     <string name="key_screen_details">key_screen_details</string>
 </resources>

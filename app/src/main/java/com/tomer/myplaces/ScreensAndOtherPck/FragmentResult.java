@@ -25,7 +25,7 @@ public class FragmentResult extends Fragment {
 
         Bundle bundle = this.getArguments();
         if (bundle != null) {
-            placeModelSearch = (PlaceModel) bundle.getSerializable(getString(R.string.map_search_key));
+            placeModelSearch = (PlaceModel) bundle.getSerializable(getString(R.string.place_search_key));
         }
 
         minDet1 = mView.findViewById(R.id.minDet1);

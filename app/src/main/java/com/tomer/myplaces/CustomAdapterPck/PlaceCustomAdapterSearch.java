@@ -43,8 +43,8 @@ public class PlaceCustomAdapterSearch extends ArrayAdapter<PlaceModel> {
             listItem = LayoutInflater.from(mContext).inflate(R.layout.place_item_row_search, parent, false);
         }
 
-        PlaceModel currentMap = getItem(position);  // Position of items
-        if (currentMap != null) {  // If the position of the items not null
+        PlaceModel currentPlaces = getItem(position);  // Position of items
+        if (currentPlaces != null) {  // If the position of the items not null
             locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
             criteria = new Criteria();
             String provider = locationManager.getBestProvider(criteria, true);
@@ -62,8 +62,8 @@ public class PlaceCustomAdapterSearch extends ArrayAdapter<PlaceModel> {
                 if (location != null) {
                     double distanceMe;
                     Location locationA = new Location("Point A");
-                    locationA.setLatitude(currentMap.getLat());
-                    locationA.setLongitude(currentMap.getLng());
+                    locationA.setLatitude(currentPlaces.getLat());
+                    locationA.setLongitude(currentPlaces.getLng());
                     Location locationB = new Location("Point B");
                     locationB.setLatitude(location.getLatitude());
                     locationB.setLongitude(location.getLongitude());
@@ -72,7 +72,7 @@ public class PlaceCustomAdapterSearch extends ArrayAdapter<PlaceModel> {
                     try {
                         ImageView image1 = listItem.findViewById(R.id.image1);
                         Picasso.get().load("https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="
-                                + currentMap.getPhoto_reference() +
+                                + currentPlaces.getPhoto_reference() +
                                 "&key=" + mContext.getString(R.string.api_key_search)).into(image1);
                     } catch (Exception e) {
 
@@ -80,11 +80,11 @@ public class PlaceCustomAdapterSearch extends ArrayAdapter<PlaceModel> {
 
                     // Put the text in name1
                     TextView name1 = listItem.findViewById(R.id.name1);
-                    name1.setText(String.valueOf(currentMap.getName()));
+                    name1.setText(String.valueOf(currentPlaces.getName()));
 
                     // Put the text in address1
                     TextView address1 = listItem.findViewById(R.id.address1);
-                    address1.setText(String.valueOf(currentMap.getVicinity()));
+                    address1.setText(String.valueOf(currentPlaces.getVicinity()));
 
                     String distanceKm1;
                     if (distanceMe < 1) {

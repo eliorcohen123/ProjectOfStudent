@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         });
 
         mPlacesDBHelperFavorites = new PlaceDBHelperFavorites(this);  // Put the SQLiteHelper in ScreenTwo
-        mPlaceListFavorites = mPlacesDBHelperFavorites.getAllPlaces();  // Put the getAllMovies of SQLiteHelper in the ArrayList of ScreenTwo
+        mPlaceListFavorites = mPlacesDBHelperFavorites.getAllPlaces();  // Put the getAllPlaces of SQLiteHelper in the ArrayList of ScreenTwo
         mAdapterFavorites = new PlaceCustomAdapterFavorites(this, mPlaceListFavorites);  // Comparing the ArrayList of ScreenTwo to the CustomAdapter
 
         mGetPlacesAsyncTaskFavorites = new GetPlacesAsyncTaskFavorites(listPre);

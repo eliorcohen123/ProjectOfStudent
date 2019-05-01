@@ -28,7 +28,7 @@ public class SearchResults extends AppCompatActivity implements SearchInterface 
     public void onLocationItemClick(PlaceModel placeModel) {
         FragmentResult fragmentResult = new FragmentResult();
         Bundle bundle = new Bundle();
-        bundle.putSerializable(getString(R.string.map_search_key), placeModel);
+        bundle.putSerializable(getString(R.string.place_search_key), placeModel);
         fragmentResult.setArguments(bundle);
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
