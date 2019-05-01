@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tomer.myplaces">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".ScreensAndOtherPck.ConApp"
+        android:allowBackup="true"
+        android:icon="@drawable/picmarker"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/picmarker"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme2">
+        <activity android:name=".ScreensAndOtherPck.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ScreensAndOtherPck.SearchParameters" />
+        <activity android:name=".ScreensAndOtherPck.SearchResults" />
+        <activity android:name=".ScreensAndOtherPck.PlaceDetails" />
+    </application>
+
+</manifest>
